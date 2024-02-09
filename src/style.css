@@ -13,10 +13,22 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-input::placeholder{
+.hero-input::placeholder{
     color: white;
 }
 .m-download{
     top: -120px;
     left: 27%;
+}
+.sign-in-main{
+    background-image: url('./Assets/images/Sign-in-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sign-in-form, .sign-input{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.sign-input{
+    color: white;
 }
