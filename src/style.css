@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Hero-main{
+    background-image: url('./Assets/images/Hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+}
+input::placeholder{
+    color: white;
+}
+.m-download{
+    top: -120px;
+    left: 27%;
+}
