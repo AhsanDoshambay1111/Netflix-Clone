@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../Assets/images/N-logo.png";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <div className="Hero-main h-[100vh]">
@@ -10,9 +11,9 @@ function Hero() {
           </div>
 
           <div>
-            <a className="bg-[red] text-[white] px-8 py-2 rounded-md font-semibold" href="/Login">
+            <Link className="bg-[red] text-[white] px-8 py-2 rounded-md font-semibold" to="/Login">
               Login
-            </a>
+            </Link>
           </div>
         </div>
 
