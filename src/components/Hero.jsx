@@ -12,7 +12,7 @@ function Hero() {
 
           <div>
             <Link className="bg-[red] text-[white] px-8 py-2 rounded-md font-semibold" to="/Login">
-              Login
+              Sign In
             </Link>
           </div>
         </div>
@@ -36,9 +36,9 @@ function Hero() {
                   type="email"
                   placeholder="Email Address"
                   required
-                  className="text-[white] hero-input w-[100%] bg-transparent border border-white px-4 sm:w-[350px] py-2"
+                  className="text-[white] rounded-md hero-input w-[100%] bg-transparent border border-white px-4 sm:w-[350px] py-2"
                 ></input>
-                <button className="bg-[red] sm:w-[auto] w-[100%] text-white px-8 py-2">
+                <button className="bg-[red] rounded-md sm:w-[auto] w-[100%] text-white px-8 py-2">
                   Get Started
                 </button>
               </form>
