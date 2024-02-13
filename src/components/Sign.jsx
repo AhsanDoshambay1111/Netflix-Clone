@@ -19,7 +19,7 @@ function Sign() {
             setError('Email and password cannot be empty');
         } else if (email === 'Example@gmail.com' && password === 'pass321') {
             // Open the / page if credentials are correct
-            window.location.href = "/";
+            window.location.href = "/movies";
         } else {
             setError('Incorrect email or password');
         }

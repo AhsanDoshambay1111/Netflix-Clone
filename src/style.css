@@ -32,3 +32,15 @@ body{
 .sign-input{
     color: white;
 }
+.Movies-banner{
+    background-image: url('../src/Assets/images/money-heist-img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.Movies-banner button{
+    background-color: rgba(0, 0, 0, 0.5);    
+}
+.search-input{
+    background-color: rgba(0, 0, 0, 0.5);    
+}
