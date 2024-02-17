@@ -8,7 +8,7 @@ function Moviespost1() {
   useEffect(() => {
     const fetchMoviePosters = async () => {
       try {
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=050f33548a3eb8b35fc4d811ccf09550`);
+        const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=df1b52ef7d8e9cb2124dedc5eb18a6c7`);
         setMoviePosters(response.data.results);
       } catch (error) {
         console.error('Error fetching movie posters:', error);
