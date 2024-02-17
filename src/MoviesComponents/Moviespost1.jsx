@@ -8,7 +8,7 @@ function Moviespost1() {
   useEffect(() => {
     const fetchMoviePosters = async () => {
       try {
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=4a2490f42297f72f5edf70a730edc1b3`);
+        const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=050f33548a3eb8b35fc4d811ccf09550`);
         setMoviePosters(response.data.results);
       } catch (error) {
         console.error('Error fetching movie posters:', error);
@@ -29,7 +29,7 @@ function Moviespost1() {
               key={index}
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={`Movie Poster ${index}`}
-              className='h-48 w-52'
+              className='h-48 w-32 cursor-pointer brightness-50 hover:brightness-100 duration-300 ease-in-out'
             />
           ))
         ) : (
