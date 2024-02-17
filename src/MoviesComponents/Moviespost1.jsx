@@ -8,8 +8,25 @@ function Moviespost1() {
   useEffect(() => {
     const fetchMoviePosters = async () => {
       try {
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=df1b52ef7d8e9cb2124dedc5eb18a6c7`);
-        setMoviePosters(response.data.results);
+        let posters = [];
+        let page = 1;
+
+        // Fetch until we have 100 posters or there's no more pages
+        while (posters.length < 300) {
+          const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=2d64fd817e2b86c50a0213b6a33b33b0&page=${page}`);
+          const results = response.data.results;
+          
+          // Push each poster to the array
+          posters = [...posters, ...results.map(movie => movie.poster_path)];
+          
+          // Move to the next page
+          page++;
+
+          // Break the loop if there are no more pages
+          if (results.length === 0) break;
+        }
+
+        setMoviePosters(posters.slice(0, 300)); // Set only first 100 posters
       } catch (error) {
         console.error('Error fetching movie posters:', error);
       }
@@ -24,10 +41,10 @@ function Moviespost1() {
 
       <div className='flex overflow-x-hidden gap-2 my-4'>
         {moviePosters.length > 0 ? (
-          moviePosters.map((movie, index) => (
+          moviePosters.map((poster, index) => (
             <img
               key={index}
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500${poster}`}
               alt={`Movie Poster ${index}`}
               className='h-48 w-32 cursor-pointer brightness-50 hover:brightness-100 duration-300 ease-in-out'
             />
